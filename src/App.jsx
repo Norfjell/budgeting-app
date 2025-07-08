@@ -1,16 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 class="text-3xl font-bold">Hello Tailwind</h1>
-    </>
-  )
+    <div className="min-h-screen bg-gray-100 text-gray-800">
+      <Navbar />
+
+      <main className="p-6">
+        <Routes>
+          <Route path="/" element={<div>Dashboard Page</div>} />
+          <Route path="/transactions" element={<div>Transactions Page</div>} />
+          <Route path="/budget" element={<div>Budget Page</div>} />
+          <Route path="/reports" element={<div>Reports Page</div>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </main>
+    </div>
+  );
 }
 
-export default App
+export default App;
