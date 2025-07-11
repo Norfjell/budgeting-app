@@ -25,6 +25,7 @@ export default function Navbar() {
         <Link to="/transactions">Transactions</Link>
         <Link to="/budget">Budget</Link>
         <Link to="/reports">Reports</Link>
+        <Link to="/account">Account</Link>
       </div>
 
       <div className="flex gap-4">
