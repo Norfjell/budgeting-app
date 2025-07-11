@@ -1,21 +1,23 @@
 import { useState } from "react";
-import { auth } from "../firebase";
+import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
   const auth = getAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMsg(""); // clear previous error
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/"); // Redirect to dashboard
     } catch (err) {
-      alert("Login failed: " + err.message);
+      console.error(err);
+      setErrorMsg("Invalid email or password."); 
     }
   };
 
@@ -31,17 +33,33 @@ export default function Login() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full border px-3 py-2 rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button className="w-full bg-blue-600 text-white py-2 rounded">
+        <div>
+          <input
+            type="password"
+            placeholder="Password"
+            className="w-full border px-3 py-2 rounded"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          {errorMsg && (
+            <p className="text-red-600 text-sm mt-1">{errorMsg}</p>
+          )}
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+        >
           Login
         </button>
+        <p className="text-sm mt-2 text-center">
+          <Link
+            to="/forgot-password"
+            className="text-indigo-600 hover:underline"
+          >
+            Forgot Password?
+          </Link>
+        </p>
       </form>
     </div>
   );
