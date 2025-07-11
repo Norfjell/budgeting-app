@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import PrivateRoute from "./components/PrivateRoute";
+import Account from "./pages/Account";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,6 +33,14 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route
+            path="/account"
+            element={
+              <PrivateRoute>
+                <Account />
+              </PrivateRoute>
+            }
+          />
 
           {/* Protected Routes */}
           <Route
