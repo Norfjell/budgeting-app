@@ -1,33 +1,14 @@
 {
-  "name": "budgeting-app",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "firebase": "^11.10.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.3"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.29.0",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react": "^4.5.2",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9.29.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.20",
-    "globals": "^16.2.0",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.11",
-    "vite": "^7.0.0"
-  }
+    "TODO List": "dsaads",
+    "Enter your credentials below to login": "daads",
+    "Login successful !\nWelcome back %s !": "asdasdas",
+    "Make sure you've entered the correct username and password": "Hwɛ sɛ woakyerɛw username ne password a ɛfata",
+    "I forgot my password": "Me werɛ fii me password.",
+    "Enter your address in the field below. A new password will be sent to your inbox.": "Kyerɛw w’address wɔ afã a ɛwɔ ase ha no mu. Wɔde password foforo bɛkɔ wo inbox mu.",
+    "Sign up for free! No credit card required!": "Kyerɛw wo din kwa! Ɛho nhia sɛ wɔde credit card biara di dwuma!",
+    "Thank you for signing up !\nPlease check your email address to activate your account.": "Yɛda wo ase sɛ woakyerɛw wo din!\nYɛsrɛ wo hwɛ wo email address no mu na ama wo akontaabu no ayɛ adwuma.",
+    "We were unable to sign you up.\nPlease correct the marked fields.": "Yɛantumi amfa wo nsa anhyɛ ase.\nYɛsrɛ sɛ teɛteɛ mfuw a wɔahyɛ no agyirae no so.",
+    "Terms and conditions": "Nsɛm ne nhyehyɛe ahorow",
+    "Just one user online": "Obiako pɛ na ɔde di dwuma wɔ intanɛt so",
+    "Password": "Paswɛde"
 }
